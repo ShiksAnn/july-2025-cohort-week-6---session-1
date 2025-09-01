@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Javascript Events</title>
 </head>
 <body>
-   <!-- 1. Inline -->
+  <!-- 1. Toggle Button (Dark Mode Example) -->
+   <button onclick="toggleTheme()">Toggle Dark Mode</button>
+   
+    <!-- 1. Inline => attribute -->
    <button onclick="alert('Button Clicked')">Click Me 1</button>
    <button id="myButton">Click Me 2</button>
    <button id="thirdButton">Click Me 3</button>
+   
    <p id="output">Waiting...</p>
    <input type="text" id="inputBox" placeholder="Type something...">
    <p 
@@ -17,6 +22,15 @@
     onmouseout="this.style.color='black'">
     Hover over this text...
     </p>
+
+    <!-- Drag & Drop -->
+     <div id="dropzone">Drop Here</div>
+     <img 
+     src="https://images.pexels.com/photos/33564839/pexels-photo-33564839.jpeg"
+     alt="Draggable Image"
+        id="dragItem"
+        draggable="true">
+        
 
     <!-- 2. DOM property method -->
     <!-- 3. Event Listener Method -->
