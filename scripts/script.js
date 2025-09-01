@@ -28,3 +28,26 @@ input.addEventListener('focus', function(){
 input.addEventListener('blur', function(){
     input.style.backgroundColor = 'lightyellow';
 });
+
+function toggleTheme(){
+    document.body.classList.toggle('dark-theme');
+}
+
+//drag and drop
+let dragItem = document.getElementById('dragItem');
+let dropzone = document.getElementById('dropzone');
+
+dragItem.addEventListener('dragstart', function(event){
+    event.dataTransfer.setData('id', event.target.id);
+});
+
+dropzone.addEventListener('dragover', function(event){
+    event.preventDefault(); //allow drop
+});
+
+dropzone.addEventListener('drop', function(event){
+    event.preventDefault();
+    let id = event.dataTransfer.getData('id');
+    dropzone.appendChild(document.getElementById(id));
+    dropzone.style.backgroundColor = 'lightgreen'; 
+});
