@@ -30,10 +30,16 @@
      alt="Draggable Image"
         id="dragItem"
         draggable="true">
-        
-
     <!-- 2. DOM property method -->
     <!-- 3. Event Listener Method -->
+
+    <!-- Form Validation -->
+    <form onsubmit="return validateSignUp()">
+        <input type="text" id="username" placeholder="Enter your username"><br />
+        <input type="email" id="email" placeholder="Enter your email"><br />
+        <input type="password" id="password" placeholder="Enter your password"><br />
+        <button type="submit">Submit</button>
+    </form>
     <script src="scripts/script.js"></script>
     
 </body>
